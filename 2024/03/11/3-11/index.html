@@ -1,11 +1,360 @@
-doctype
-html(lang=config.language)
-  include ./partial/header-base.pug
-  body
-    include ./partial/header.pug
-    main
-      section.main-content !{ body }
-    include ./partial/footer.pug
-    script(src=url_for('scripts/dark.js'))
-    if is_post()
-      script(src=url_for('scripts/post.js'))
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="Every day is a chance to learn something new.">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Jason">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="3.11"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Every day is a chance to learn something new." />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="jason001130"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    
+        <meta name="twitter:card" content="summary" />
+    
+    
+    
+
+    <!-- Title -->
+    
+    <title>3.11 - jason001130</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    <!-- Google Analytics -->
+    
+
+
+<meta name="generator" content="Hexo 7.1.1"></head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about.html">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories">
+                    Categories
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/contact.html">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/2024/03/11/3-11/">
+                3.11
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2024-03-11</span>
+            
+            
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <h2 id="javascript中根据变量的作用域可将变量分为全局变量和局部变量，在ES6中会新增块级作用域，以-包含。"><a href="#javascript中根据变量的作用域可将变量分为全局变量和局部变量，在ES6中会新增块级作用域，以-包含。" class="headerlink" title="javascript中根据变量的作用域可将变量分为全局变量和局部变量，在ES6中会新增块级作用域，以{}包含。"></a>javascript中根据变量的作用域可将变量分为全局变量和局部变量，在ES6中会新增块级作用域，以{}包含。</h2><h2 id="javascript引擎运行分为两步：预解析和代码执行。其中，预解析分为变量预解析-变量提升-和函数预解析-函数提升-。-1-变量提升就是把所有的变量声明提升到当前作用域的最前面，不提升赋值操作。-2-函数提升就是把通过function关键字声明的函数提升到当前作用域的最前面，不调用函数。注意：不提升通过函数表达式声明的函数。"><a href="#javascript引擎运行分为两步：预解析和代码执行。其中，预解析分为变量预解析-变量提升-和函数预解析-函数提升-。-1-变量提升就是把所有的变量声明提升到当前作用域的最前面，不提升赋值操作。-2-函数提升就是把通过function关键字声明的函数提升到当前作用域的最前面，不调用函数。注意：不提升通过函数表达式声明的函数。" class="headerlink" title="javascript引擎运行分为两步：预解析和代码执行。其中，预解析分为变量预解析(变量提升)和函数预解析(函数提升)。(1) 变量提升就是把所有的变量声明提升到当前作用域的最前面，不提升赋值操作。(2) 函数提升就是把通过function关键字声明的函数提升到当前作用域的最前面，不调用函数。注意：不提升通过函数表达式声明的函数。"></a>javascript引擎运行分为两步：预解析和代码执行。其中，预解析分为变量预解析(变量提升)和函数预解析(函数提升)。<br>(1) 变量提升就是把所有的变量声明提升到当前作用域的最前面，不提升赋值操作。<br>(2) 函数提升就是把通过function关键字声明的函数提升到当前作用域的最前面，不调用函数。<br>注意：不提升通过函数表达式声明的函数。</h2><h2 id="下面思考两个面试中常见的例题，帮助大家更好的理解javascript的预解析：-例1var-num-10-fun-function-fun-console-log-num-var-num-20-做这种输出结果的题目时，不能一头雾水地直接给个答案，正确的步骤是先模拟javascript引擎对代码进行预解析，拆开它的皮囊，以探其究竟。所以我们不妨先写出预解析之后javascript引擎实际执行的代码，然后再给出结果，避免跳入题目的坑里。-例1实际执行的代码是：var-num-变量提升function-fun-函数提升-var-num-变量提升-console-log-num-从上往下执行，num变量只声明，没有赋值，输出undefined-num-20-num-10-fun"><a href="#下面思考两个面试中常见的例题，帮助大家更好的理解javascript的预解析：-例1var-num-10-fun-function-fun-console-log-num-var-num-20-做这种输出结果的题目时，不能一头雾水地直接给个答案，正确的步骤是先模拟javascript引擎对代码进行预解析，拆开它的皮囊，以探其究竟。所以我们不妨先写出预解析之后javascript引擎实际执行的代码，然后再给出结果，避免跳入题目的坑里。-例1实际执行的代码是：var-num-变量提升function-fun-函数提升-var-num-变量提升-console-log-num-从上往下执行，num变量只声明，没有赋值，输出undefined-num-20-num-10-fun" class="headerlink" title="下面思考两个面试中常见的例题，帮助大家更好的理解javascript的预解析：&#x2F;&#x2F; 例1var num &#x3D; 10;fun();function fun() {    console.log(num);    var num &#x3D; 20;}做这种输出结果的题目时，不能一头雾水地直接给个答案，正确的步骤是先模拟javascript引擎对代码进行预解析，拆开它的皮囊，以探其究竟。所以我们不妨先写出预解析之后javascript引擎实际执行的代码，然后再给出结果，避免跳入题目的坑里。&#x2F;&#x2F; 例1实际执行的代码是：var num; &#x2F;&#x2F; 变量提升function fun() { &#x2F;&#x2F; 函数提升    var num; &#x2F;&#x2F; 变量提升    console.log(num); &#x2F;&#x2F; 从上往下执行，num变量只声明，没有赋值，输出undefined    num &#x3D; 20;}num &#x3D; 10;fun();"></a>下面思考两个面试中常见的例题，帮助大家更好的理解javascript的预解析：<br>&#x2F;&#x2F; 例1<br>var num &#x3D; 10;<br>fun();<br>function fun() {<br>    console.log(num);<br>    var num &#x3D; 20;<br>}<br>做这种输出结果的题目时，不能一头雾水地直接给个答案，正确的步骤是先模拟javascript引擎对代码进行预解析，拆开它的皮囊，以探其究竟。<br>所以我们不妨先写出预解析之后javascript引擎实际执行的代码，然后再给出结果，避免跳入题目的坑里。<br>&#x2F;&#x2F; 例1实际执行的代码是：<br>var num; &#x2F;&#x2F; 变量提升<br>function fun() { &#x2F;&#x2F; 函数提升<br>    var num; &#x2F;&#x2F; 变量提升<br>    console.log(num); &#x2F;&#x2F; 从上往下执行，num变量只声明，没有赋值，输出undefined<br>    num &#x3D; 20;<br>}<br>num &#x3D; 10;<br>fun();</h2><p>&#x2F;&#x2F; 例2<br>f1();<br>console.log(c);<br>console.log(b);<br>console.log(a);<br>function f1() {<br>    var a &#x3D; b &#x3D; c &#x3D; 9; &#x2F;&#x2F; 此处通过连等实际只给变量a进行了声明，变量b和变量c只是赋值，函数内部的变量如果未声明，直接赋值，则会变成全局变量<br>    console.log(a);<br>    console.log(b);<br>    console.log(c);<br>}<br>&#x2F;&#x2F; 例2实际执行的代码：<br>function f1() {<br>    var a &#x3D; 9;<br>    b &#x3D; 9;<br>    c &#x3D; 9;<br>    console.log(a); &#x2F;&#x2F; 9<br>    console.log(b); &#x2F;&#x2F; 9<br>    console.log(c); &#x2F;&#x2F; 9<br>}<br>f1();<br>console.log(c); &#x2F;&#x2F; 9<br>console.log(b); &#x2F;&#x2F; 9<br>console.log(a); &#x2F;&#x2F; a是函数内部的局部变量，外部输出会报错</p>
+
+    </div>
+
+    
+
+    
+        <div class="post-tags">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            <a href="/tags/前端作用域/">#前端作用域</a>
+        </div>
+    
+
+    <!-- Comments -->
+    
+
+</div>
+        </section>
+
+    </div>
+</div>
+
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    This theme was developed by <a target="_blank" rel="noopener" href="https://github.com/klugjo">Jonathan Klughertz</a>. The source code is available on Github. Create Websites. Make Magic.
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2024/03/11/3-11/">3.11</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2024/03/10/jason-first-blog/">jason-first-blog</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-alpha-dust">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a target="_blank" rel="noopener" href="https://twitter.com/?lang=en">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-twitter"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a target="_blank" rel="noopener" href="https://www.facebook.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-facebook"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a target="_blank" rel="noopener" href="https://www.instagram.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-instagram"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a target="_blank" rel="noopener" href="https://dribbble.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-dribbble"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a target="_blank" rel="noopener" href="https://telegram.org/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-telegram"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a target="_blank" rel="noopener" href="https://www.behance.net/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-behance"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a target="_blank" rel="noopener" href="https://500px.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-500px"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:test@example.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @Untitled. All right reserved | Design & Hexo <a target="_blank" rel="noopener" href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+
+<script src="/js/main.js"></script>
+
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
