@@ -112,7 +112,7 @@
           
             <h2 class="last-time">
               <span>最后更新于</span>
-              <time  class="article-updated" datetime="2024-03-12T00:49:53.928Z" itemprop="dateUpdated">2024-03-12</time>
+              <time  class="article-updated" datetime="2024-03-12T00:57:58.354Z" itemprop="dateUpdated">2024-03-12</time>
             </h2>
           
           
@@ -148,9 +148,9 @@
         <ul>
 <li></li>
 </ul>
-<p>javascript中根据变量的作用域可将变量分为全局变量和局部变量，在ES6中会新增块级作用域，以{}包含。</p>
-<p>javascript引擎运行分为两步：预解析和代码执行。其中，预解析分为变量预解析(变量提升)和函数预解析(函数提升)。<br>(1) 变量提升就是把所有的变量声明提升到当前作用域的最前面，不提升赋值操作。<br>(2) 函数提升就是把通过function关键字声明的函数提升到当前作用域的最前面，不调用函数。<br>注意：不提升通过函数表达式声明的函数。</p>
-<p>下面思考两个面试中常见的例题，帮助大家更好的理解javascript的预解析：<br>&#x2F;&#x2F; 例1<br>var num &#x3D; 10;<br>fun();<br>function fun() {<br>    console.log(num);<br>    var num &#x3D; 20;<br>}<br>做这种输出结果的题目时，不能一头雾水地直接给个答案，正确的步骤是先模拟javascript引擎对代码进行预解析，拆开它的皮囊，以探其究竟。<br>所以我们不妨先写出预解析之后javascript引擎实际执行的代码，然后再给出结果，避免跳入题目的坑里。</p>
+<h2 id="javascript中根据变量的作用域可将变量分为全局变量和局部变量，在ES6中会新增块级作用域，以-包含。"><a href="#javascript中根据变量的作用域可将变量分为全局变量和局部变量，在ES6中会新增块级作用域，以-包含。" class="headerlink" title="javascript中根据变量的作用域可将变量分为全局变量和局部变量，在ES6中会新增块级作用域，以{}包含。"></a>javascript中根据变量的作用域可将变量分为全局变量和局部变量，在ES6中会新增块级作用域，以{}包含。</h2><h2 id="javascript引擎运行分为两步：预解析和代码执行。其中，预解析分为变量预解析-变量提升-和函数预解析-函数提升-。-1-变量提升就是把所有的变量声明提升到当前作用域的最前面，不提升赋值操作。-2-函数提升就是把通过function关键字声明的函数提升到当前作用域的最前面，不调用函数。注意：不提升通过函数表达式声明的函数。"><a href="#javascript引擎运行分为两步：预解析和代码执行。其中，预解析分为变量预解析-变量提升-和函数预解析-函数提升-。-1-变量提升就是把所有的变量声明提升到当前作用域的最前面，不提升赋值操作。-2-函数提升就是把通过function关键字声明的函数提升到当前作用域的最前面，不调用函数。注意：不提升通过函数表达式声明的函数。" class="headerlink" title="javascript引擎运行分为两步：预解析和代码执行。其中，预解析分为变量预解析(变量提升)和函数预解析(函数提升)。(1) 变量提升就是把所有的变量声明提升到当前作用域的最前面，不提升赋值操作。(2) 函数提升就是把通过function关键字声明的函数提升到当前作用域的最前面，不调用函数。注意：不提升通过函数表达式声明的函数。"></a>javascript引擎运行分为两步：预解析和代码执行。其中，预解析分为变量预解析(变量提升)和函数预解析(函数提升)。<br>(1) 变量提升就是把所有的变量声明提升到当前作用域的最前面，不提升赋值操作。<br>(2) 函数提升就是把通过function关键字声明的函数提升到当前作用域的最前面，不调用函数。<br>注意：不提升通过函数表达式声明的函数。</h2><p>下面思考两个面试中常见的例题，帮助大家更好的理解javascript的预解析：</p>
+<p>&#x2F;&#x2F; 例1<br>var num &#x3D; 10;<br>fun();<br>function fun() {<br>    console.log(num);<br>    var num &#x3D; 20;<br>}</p>
+<p>做这种输出结果的题目时，不能一头雾水地直接给个答案，正确的步骤是先模拟javascript引擎对代码进行预解析，拆开它的皮囊，以探其究竟。<br>所以我们不妨先写出预解析之后javascript引擎实际执行的代码，然后再给出结果，避免跳入题目的坑里。</p>
 <p>&#x2F;&#x2F; 例1实际执行的代码是：<br>var num; &#x2F;&#x2F; 变量提升<br>function fun() { &#x2F;&#x2F; 函数提升<br>    var num; &#x2F;&#x2F; 变量提升<br>    console.log(num); &#x2F;&#x2F; 从上往下执行，num变量只声明，没有赋值，输出undefined<br>    num &#x3D; 20;<br>}<br>num &#x3D; 10;<br>fun();</p>
 <p>&#x2F;&#x2F; 例2<br>f1();<br>console.log(c);<br>console.log(b);<br>console.log(a);<br>function f1() {<br>    var a &#x3D; b &#x3D; c &#x3D; 9; &#x2F;&#x2F; 此处通过连等实际只给变量a进行了声明，变量b和变量c只是赋值，函数内部的变量如果未声明，直接赋值，则会变成全局变量<br>    console.log(a);<br>    console.log(b);<br>    console.log(c);<br>}</p>
 <p>&#x2F;&#x2F; 例2实际执行的代码：<br>function f1() {<br>    var a &#x3D; 9;<br>    b &#x3D; 9;<br>    c &#x3D; 9;<br>    console.log(a); &#x2F;&#x2F; 9<br>    console.log(b); &#x2F;&#x2F; 9<br>    console.log(c); &#x2F;&#x2F; 9<br>}<br>f1();<br>console.log(c); &#x2F;&#x2F; 9<br>console.log(b); &#x2F;&#x2F; 9<br>console.log(a); &#x2F;&#x2F; a是函数内部的局部变量，外部输出会报错</p></p>
