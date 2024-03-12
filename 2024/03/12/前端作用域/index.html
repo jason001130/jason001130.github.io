@@ -26,7 +26,7 @@
 
   
 
-  <title>3.11 | jason</title>
+  <title>前端作用域 | jason</title>
 
   
 
@@ -103,12 +103,17 @@
     <div class="header-content">
       <div class="post-text layout-block">
         <div class="layout-margin">
-          <h1 class="title-wrap">3.11</h1>
+          <h1 class="title-wrap">前端作用域</h1>
           <h2 class="title-sub-wrap">
             <strong>Jason</strong>
             <span>发布于</span>
-            <time  class="article-date" datetime="2024-03-11T12:07:08.000Z" itemprop="datePublished">2024-03-11</time>
+            <time  class="article-date" datetime="2024-03-11T20:07:08.000Z" itemprop="datePublished">2024-03-11</time>
           </h2>
+          
+            <h2 class="last-time">
+              <span>最后更新于</span>
+              <time  class="article-updated" datetime="2024-03-12T00:49:53.928Z" itemprop="dateUpdated">2024-03-12</time>
+            </h2>
           
           
           <ul class="wrap-list dark">
@@ -116,7 +121,7 @@
 </ul>
           <ul class="wrap-list dark">
   
-    <li><a href="/tags/%E5%89%8D%E7%AB%AF%E4%BD%9C%E7%94%A8%E5%9F%9F/">🏷️ 前端作用域</a></li>
+    <li><a href="/tags/%E9%A2%84%E8%A7%A3%E6%9E%90-%E5%8F%98%E9%87%8F%E6%8F%90%E5%8D%87-%E5%87%BD%E6%95%B0%E6%8F%90%E5%8D%87/">🏷️ 预解析 变量提升 函数提升</a></li>
   
 </ul>
         </div>
@@ -140,7 +145,15 @@
       
       
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
-        <h2 id="javascript中根据变量的作用域可将变量分为全局变量和局部变量，在ES6中会新增块级作用域，以-包含。"><a href="#javascript中根据变量的作用域可将变量分为全局变量和局部变量，在ES6中会新增块级作用域，以-包含。" class="headerlink" title="javascript中根据变量的作用域可将变量分为全局变量和局部变量，在ES6中会新增块级作用域，以{}包含。"></a>javascript中根据变量的作用域可将变量分为全局变量和局部变量，在ES6中会新增块级作用域，以{}包含。</h2><h2 id="javascript引擎运行分为两步：预解析和代码执行。其中，预解析分为变量预解析-变量提升-和函数预解析-函数提升-。-1-变量提升就是把所有的变量声明提升到当前作用域的最前面，不提升赋值操作。-2-函数提升就是把通过function关键字声明的函数提升到当前作用域的最前面，不调用函数。注意：不提升通过函数表达式声明的函数。"><a href="#javascript引擎运行分为两步：预解析和代码执行。其中，预解析分为变量预解析-变量提升-和函数预解析-函数提升-。-1-变量提升就是把所有的变量声明提升到当前作用域的最前面，不提升赋值操作。-2-函数提升就是把通过function关键字声明的函数提升到当前作用域的最前面，不调用函数。注意：不提升通过函数表达式声明的函数。" class="headerlink" title="javascript引擎运行分为两步：预解析和代码执行。其中，预解析分为变量预解析(变量提升)和函数预解析(函数提升)。(1) 变量提升就是把所有的变量声明提升到当前作用域的最前面，不提升赋值操作。(2) 函数提升就是把通过function关键字声明的函数提升到当前作用域的最前面，不调用函数。注意：不提升通过函数表达式声明的函数。"></a>javascript引擎运行分为两步：预解析和代码执行。其中，预解析分为变量预解析(变量提升)和函数预解析(函数提升)。<br>(1) 变量提升就是把所有的变量声明提升到当前作用域的最前面，不提升赋值操作。<br>(2) 函数提升就是把通过function关键字声明的函数提升到当前作用域的最前面，不调用函数。<br>注意：不提升通过函数表达式声明的函数。</h2><h2 id="下面思考两个面试中常见的例题，帮助大家更好的理解javascript的预解析：-例1var-num-10-fun-function-fun-console-log-num-var-num-20-做这种输出结果的题目时，不能一头雾水地直接给个答案，正确的步骤是先模拟javascript引擎对代码进行预解析，拆开它的皮囊，以探其究竟。所以我们不妨先写出预解析之后javascript引擎实际执行的代码，然后再给出结果，避免跳入题目的坑里。-例1实际执行的代码是：var-num-变量提升function-fun-函数提升-var-num-变量提升-console-log-num-从上往下执行，num变量只声明，没有赋值，输出undefined-num-20-num-10-fun"><a href="#下面思考两个面试中常见的例题，帮助大家更好的理解javascript的预解析：-例1var-num-10-fun-function-fun-console-log-num-var-num-20-做这种输出结果的题目时，不能一头雾水地直接给个答案，正确的步骤是先模拟javascript引擎对代码进行预解析，拆开它的皮囊，以探其究竟。所以我们不妨先写出预解析之后javascript引擎实际执行的代码，然后再给出结果，避免跳入题目的坑里。-例1实际执行的代码是：var-num-变量提升function-fun-函数提升-var-num-变量提升-console-log-num-从上往下执行，num变量只声明，没有赋值，输出undefined-num-20-num-10-fun" class="headerlink" title="下面思考两个面试中常见的例题，帮助大家更好的理解javascript的预解析：&#x2F;&#x2F; 例1var num &#x3D; 10;fun();function fun() {    console.log(num);    var num &#x3D; 20;}做这种输出结果的题目时，不能一头雾水地直接给个答案，正确的步骤是先模拟javascript引擎对代码进行预解析，拆开它的皮囊，以探其究竟。所以我们不妨先写出预解析之后javascript引擎实际执行的代码，然后再给出结果，避免跳入题目的坑里。&#x2F;&#x2F; 例1实际执行的代码是：var num; &#x2F;&#x2F; 变量提升function fun() { &#x2F;&#x2F; 函数提升    var num; &#x2F;&#x2F; 变量提升    console.log(num); &#x2F;&#x2F; 从上往下执行，num变量只声明，没有赋值，输出undefined    num &#x3D; 20;}num &#x3D; 10;fun();"></a>下面思考两个面试中常见的例题，帮助大家更好的理解javascript的预解析：<br>&#x2F;&#x2F; 例1<br>var num &#x3D; 10;<br>fun();<br>function fun() {<br>    console.log(num);<br>    var num &#x3D; 20;<br>}<br>做这种输出结果的题目时，不能一头雾水地直接给个答案，正确的步骤是先模拟javascript引擎对代码进行预解析，拆开它的皮囊，以探其究竟。<br>所以我们不妨先写出预解析之后javascript引擎实际执行的代码，然后再给出结果，避免跳入题目的坑里。<br>&#x2F;&#x2F; 例1实际执行的代码是：<br>var num; &#x2F;&#x2F; 变量提升<br>function fun() { &#x2F;&#x2F; 函数提升<br>    var num; &#x2F;&#x2F; 变量提升<br>    console.log(num); &#x2F;&#x2F; 从上往下执行，num变量只声明，没有赋值，输出undefined<br>    num &#x3D; 20;<br>}<br>num &#x3D; 10;<br>fun();</h2><p>&#x2F;&#x2F; 例2<br>f1();<br>console.log(c);<br>console.log(b);<br>console.log(a);<br>function f1() {<br>    var a &#x3D; b &#x3D; c &#x3D; 9; &#x2F;&#x2F; 此处通过连等实际只给变量a进行了声明，变量b和变量c只是赋值，函数内部的变量如果未声明，直接赋值，则会变成全局变量<br>    console.log(a);<br>    console.log(b);<br>    console.log(c);<br>}<br>&#x2F;&#x2F; 例2实际执行的代码：<br>function f1() {<br>    var a &#x3D; 9;<br>    b &#x3D; 9;<br>    c &#x3D; 9;<br>    console.log(a); &#x2F;&#x2F; 9<br>    console.log(b); &#x2F;&#x2F; 9<br>    console.log(c); &#x2F;&#x2F; 9<br>}<br>f1();<br>console.log(c); &#x2F;&#x2F; 9<br>console.log(b); &#x2F;&#x2F; 9<br>console.log(a); &#x2F;&#x2F; a是函数内部的局部变量，外部输出会报错</p>
+        <ul>
+<li></li>
+</ul>
+<p>javascript中根据变量的作用域可将变量分为全局变量和局部变量，在ES6中会新增块级作用域，以{}包含。</p>
+<p>javascript引擎运行分为两步：预解析和代码执行。其中，预解析分为变量预解析(变量提升)和函数预解析(函数提升)。<br>(1) 变量提升就是把所有的变量声明提升到当前作用域的最前面，不提升赋值操作。<br>(2) 函数提升就是把通过function关键字声明的函数提升到当前作用域的最前面，不调用函数。<br>注意：不提升通过函数表达式声明的函数。</p>
+<p>下面思考两个面试中常见的例题，帮助大家更好的理解javascript的预解析：<br>&#x2F;&#x2F; 例1<br>var num &#x3D; 10;<br>fun();<br>function fun() {<br>    console.log(num);<br>    var num &#x3D; 20;<br>}<br>做这种输出结果的题目时，不能一头雾水地直接给个答案，正确的步骤是先模拟javascript引擎对代码进行预解析，拆开它的皮囊，以探其究竟。<br>所以我们不妨先写出预解析之后javascript引擎实际执行的代码，然后再给出结果，避免跳入题目的坑里。</p>
+<p>&#x2F;&#x2F; 例1实际执行的代码是：<br>var num; &#x2F;&#x2F; 变量提升<br>function fun() { &#x2F;&#x2F; 函数提升<br>    var num; &#x2F;&#x2F; 变量提升<br>    console.log(num); &#x2F;&#x2F; 从上往下执行，num变量只声明，没有赋值，输出undefined<br>    num &#x3D; 20;<br>}<br>num &#x3D; 10;<br>fun();</p>
+<p>&#x2F;&#x2F; 例2<br>f1();<br>console.log(c);<br>console.log(b);<br>console.log(a);<br>function f1() {<br>    var a &#x3D; b &#x3D; c &#x3D; 9; &#x2F;&#x2F; 此处通过连等实际只给变量a进行了声明，变量b和变量c只是赋值，函数内部的变量如果未声明，直接赋值，则会变成全局变量<br>    console.log(a);<br>    console.log(b);<br>    console.log(c);<br>}</p>
+<p>&#x2F;&#x2F; 例2实际执行的代码：<br>function f1() {<br>    var a &#x3D; 9;<br>    b &#x3D; 9;<br>    c &#x3D; 9;<br>    console.log(a); &#x2F;&#x2F; 9<br>    console.log(b); &#x2F;&#x2F; 9<br>    console.log(c); &#x2F;&#x2F; 9<br>}<br>f1();<br>console.log(c); &#x2F;&#x2F; 9<br>console.log(b); &#x2F;&#x2F; 9<br>console.log(a); &#x2F;&#x2F; a是函数内部的局部变量，外部输出会报错</p></p>
 
       </section>
 
@@ -209,7 +222,7 @@
         <svg class="icon icon-tags" viewBox="0 0 1098 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
   <path d="M283.42180005 272q0-28.38857157-20.09142843-48.48000001t-48.47999998-20.09142842-48.48000002 20.09142842-20.09142846 48.48000001 20.09142846 48.48 48.48000002 20.09142843 48.47999998-20.09142843 20.09142843-48.48zM855.0332285 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.03999997 263.58857157q-20.9142853 19.81714313-48.75428534 19.81714312-28.38857157 0-48.20571468-19.81714312l-383.04-383.58857157q-20.36571468-19.81714313-34.55999999-54.10285688t-14.19428534-62.6742853l0-222.85714313q0-27.84000002 20.36571469-48.20571469t48.2057147-20.36571466l222.85714313 0q28.38857157 0 62.6742853 14.19428529t54.65142842 34.55999999l383.04000001 382.49142843q19.81714313 20.9142853 19.81714314 48.75428532zM1060.74751475 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.04 263.58857157q-20.9142853 19.81714313-48.75428531 19.81714312-19.26857155 0-31.61142843-7.47428531t-28.38857159-24.13714314l251.79428534-251.7942853q19.81714313-19.81714313 19.81714308-48.20571469 0-27.84000002-19.81714308-48.75428531l-383.04000001-382.49142845q-20.36571468-20.36571468-54.65142842-34.55999999t-62.67428532-14.19428534l120 0q28.38857157 0 62.67428532 14.19428534t54.65142842 34.55999999l383.03999998 382.49142845q19.81714313 20.9142853 19.81714314 48.75428531z" fill="currentColor"></path>
 </svg>
-        1
+        2
       </div>
     </div>
   </div>
@@ -254,7 +267,7 @@
   </div>
   <div class="widget-body">
     <div class="tags-cloud">
-      <a href="/tags/%E5%89%8D%E7%AB%AF%E4%BD%9C%E7%94%A8%E5%9F%9F/" style="font-size: 10px;" class="tags-cloud-0">前端作用域</a>
+      <a href="/tags/%E5%89%8D%E7%AB%AF%E4%BD%9C%E7%94%A8%E5%9F%9F/" style="font-size: 10px;" class="tags-cloud-0">前端作用域</a> <a href="/tags/%E9%A2%84%E8%A7%A3%E6%9E%90-%E5%8F%98%E9%87%8F%E6%8F%90%E5%8D%87-%E5%87%BD%E6%95%B0%E6%8F%90%E5%8D%87/" style="font-size: 20px;" class="tags-cloud-10">预解析 变量提升 函数提升</a>
     </div>
   </div>
 </section>
