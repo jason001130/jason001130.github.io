@@ -112,7 +112,7 @@
           
             <h2 class="last-time">
               <span>最后更新于</span>
-              <time  class="article-updated" datetime="2024-03-12T01:03:32.041Z" itemprop="dateUpdated">2024-03-12</time>
+              <time  class="article-updated" datetime="2024-03-14T11:33:25.869Z" itemprop="dateUpdated">2024-03-14</time>
             </h2>
           
           
@@ -150,7 +150,7 @@
 <p>做这种输出结果的题目时，不能一头雾水地直接给个答案，正确的步骤是先模拟javascript引擎对代码进行预解析，拆开它的皮囊，以探其究竟。<br>所以我们不妨先写出预解析之后javascript引擎实际执行的代码，然后再给出结果，避免跳入题目的坑里。</p>
 <p>&#x2F;&#x2F; 例1实际执行的代码是：<br>var num; &#x2F;&#x2F; 变量提升<br>function fun() { &#x2F;&#x2F; 函数提升<br>    var num; &#x2F;&#x2F; 变量提升<br>    console.log(num); &#x2F;&#x2F; 从上往下执行，num变量只声明，没有赋值，输出undefined<br>    num &#x3D; 20;<br>}<br>num &#x3D; 10;<br>fun();</p>
 <p>&#x2F;&#x2F; 例2<br>f1();<br>console.log(c);<br>console.log(b);<br>console.log(a);<br>function f1() {<br>    var a &#x3D; b &#x3D; c &#x3D; 9; &#x2F;&#x2F; 此处通过连等实际只给变量a进行了声明，变量b和变量c只是赋值，函数内部的变量如果未声明，直接赋值，则会变成全局变量<br>    console.log(a);<br>    console.log(b);<br>    console.log(c);<br>}</p>
-<p>&#x2F;&#x2F; 例2实际执行的代码：<br>function f1() {<br>    var a &#x3D; 9;<br>    b &#x3D; 9;<br>    c &#x3D; 9;<br>    console.log(a); &#x2F;&#x2F; 9<br>    console.log(b); &#x2F;&#x2F; 9<br>    console.log(c); &#x2F;&#x2F; 9<br>}<br>f1();<br>console.log(c); &#x2F;&#x2F; 9<br>console.log(b); &#x2F;&#x2F; 9<br>console.log(a); &#x2F;&#x2F; a是函数内部的局部变量，外部输出会报错</p></p>
+<p>&#x2F;&#x2F; 例2实际执行的代码：<br>function f1() {<br>    var a &#x3D; 9;<br>    b &#x3D; 9;<br>    c &#x3D; 9;<br>    console.log(a); &#x2F;&#x2F; 9<br>    console.log(b); &#x2F;&#x2F; 9<br>    console.log(c); &#x2F;&#x2F; 9<br>}<br>f1();<br>console.log(c); &#x2F;&#x2F; 9<br>console.log(b); &#x2F;&#x2F; 9<br>console.log(a); &#x2F;&#x2F; a是函数内部的局部变量，外部输出会报错<br><img src="/images/countDown.png" alt="图片" title="countDown"></p>
 
       </section>
 
