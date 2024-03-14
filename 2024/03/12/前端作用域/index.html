@@ -112,7 +112,7 @@
           
             <h2 class="last-time">
               <span>最后更新于</span>
-              <time  class="article-updated" datetime="2024-03-14T11:33:25.869Z" itemprop="dateUpdated">2024-03-14</time>
+              <time  class="article-updated" datetime="2024-03-14T11:52:37.819Z" itemprop="dateUpdated">2024-03-14</time>
             </h2>
           
           
@@ -150,13 +150,27 @@
 <p>做这种输出结果的题目时，不能一头雾水地直接给个答案，正确的步骤是先模拟javascript引擎对代码进行预解析，拆开它的皮囊，以探其究竟。<br>所以我们不妨先写出预解析之后javascript引擎实际执行的代码，然后再给出结果，避免跳入题目的坑里。</p>
 <p>&#x2F;&#x2F; 例1实际执行的代码是：<br>var num; &#x2F;&#x2F; 变量提升<br>function fun() { &#x2F;&#x2F; 函数提升<br>    var num; &#x2F;&#x2F; 变量提升<br>    console.log(num); &#x2F;&#x2F; 从上往下执行，num变量只声明，没有赋值，输出undefined<br>    num &#x3D; 20;<br>}<br>num &#x3D; 10;<br>fun();</p>
 <p>&#x2F;&#x2F; 例2<br>f1();<br>console.log(c);<br>console.log(b);<br>console.log(a);<br>function f1() {<br>    var a &#x3D; b &#x3D; c &#x3D; 9; &#x2F;&#x2F; 此处通过连等实际只给变量a进行了声明，变量b和变量c只是赋值，函数内部的变量如果未声明，直接赋值，则会变成全局变量<br>    console.log(a);<br>    console.log(b);<br>    console.log(c);<br>}</p>
-<p>&#x2F;&#x2F; 例2实际执行的代码：<br>function f1() {<br>    var a &#x3D; 9;<br>    b &#x3D; 9;<br>    c &#x3D; 9;<br>    console.log(a); &#x2F;&#x2F; 9<br>    console.log(b); &#x2F;&#x2F; 9<br>    console.log(c); &#x2F;&#x2F; 9<br>}<br>f1();<br>console.log(c); &#x2F;&#x2F; 9<br>console.log(b); &#x2F;&#x2F; 9<br>console.log(a); &#x2F;&#x2F; a是函数内部的局部变量，外部输出会报错<br><img src="/images/countDown.png" alt="图片" title="countDown"></p>
+<p>&#x2F;&#x2F; 例2实际执行的代码：<br>function f1() {<br>    var a &#x3D; 9;<br>    b &#x3D; 9;<br>    c &#x3D; 9;<br>    console.log(a); &#x2F;&#x2F; 9<br>    console.log(b); &#x2F;&#x2F; 9<br>    console.log(c); &#x2F;&#x2F; 9<br>}<br>f1();<br>console.log(c); &#x2F;&#x2F; 9<br>console.log(b); &#x2F;&#x2F; 9<br>console.log(a); &#x2F;&#x2F; a是函数内部的局部变量，外部输出会报错</p>
 
       </section>
 
       
       
         <nav class="article-nav">
+          
+            <div class="article-nav-item layout-padding">
+  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
+    
+    <div class="card-text">
+      
+        <a href="/2024/03/15/%E5%80%92%E8%AE%A1%E6%97%B6%E6%A1%88%E4%BE%8B/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">&#39;倒计时案例&#39;</h2>
+        </a>
+      
+      <div class="card-text--row">Newer</div>
+    </div>
+  </article>
+</div>
           
           
             <div class="article-nav-item layout-padding">
@@ -208,7 +222,7 @@
         <svg class="icon icon-article" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
   <path d="M240.51564747 647.74217627h196.07203239c16.59071043 0 30.16492806-13.57421762 30.16492805-30.16492806V165.10332731c0-33.18142087-30.16492806-60.32985613-60.32985612-60.32985611H245.04038668C225.43318342 104.7734712 210.35071939 119.85593522 210.35071939 139.46313845V617.57724821c0 16.59071043 13.57421762 30.16492806 30.16492808 30.16492806z m663.62841731-452.47392089v482.63884894c0 33.18142087-27.14843525 60.32985613-60.32985612 60.32985613H180.18579134c-33.18142087 0-60.32985613-27.14843525-60.32985612-60.32985613V195.26825538c-49.77213131 0-90.49478418 40.72265287-90.49478417 90.49478417v452.4739209c0 49.77213131 40.72265287 90.49478418 90.49478417 90.49478417h286.56681657c16.59071043 0 30.16492806 13.57421762 30.16492807 30.16492807s13.57421762 30.16492806 30.16492805 30.16492806h90.49478418c16.59071043 0 30.16492806-13.57421762 30.16492805-30.16492806s13.57421762-30.16492806 30.16492807-30.16492807h286.56681657c49.77213131 0 90.49478418-40.72265287 90.49478417-90.49478417V285.76303955c0-49.77213131-40.72265287-90.49478418-90.49478417-90.49478417zM587.41232014 647.74217627h191.54729318c19.60720323 0 34.68966726-15.08246403 34.68966729-34.68966727V134.93839925c0-16.59071043-13.57421762-30.16492806-30.16492808-30.16492805H617.57724821c-30.16492806 0-60.32985613 27.14843525-60.32985612 60.32985611v452.4739209c0 16.59071043 13.57421762 30.16492806 30.16492805 30.16492806z" fill="currentColor"></path>
 </svg>
-        <span>2</span>
+        <span>3</span>
       </div>
       <div class="count-box--item">
         <svg class="icon icon-categories" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
