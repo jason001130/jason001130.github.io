@@ -147,7 +147,7 @@
 <p>1：仿京东显示隐藏密码<br>具体效果见下图：<br><img src="/images/close.png" alt="图片" title="close"><br><img src="/images/open.png" alt="图片" title="open"></p>
 <p>在搭建完html结构和添加完css样式后，接下来进入交互效果的实现，一开始，表单是密码框，输入的数字被隐藏，同时右侧图片是半圆弧；当我们点击图片后，图片变为眼睛，同时密码框变为文本框.<br>我们根据事件的三要素，首先获取元素，然后对元素进行添加事件和注册事件。更换图片其实也就是改变img标签的src属性；密码框和文本框的不断交换也就是改变input表单的type属性.<br>具体实现见下图：<br><img src="/images/password.png" alt="图片" title="password"></p>
 <p>2：仿新浪注册页面<br>具体效果见下图：<br><img src="/images/register.png" alt="图片" title="register"><br><img src="/images/right.png" alt="图片" title="right"><br><img src="/images/wrong.png" alt="图片" title="wrong"></p>
-<p>用户输入的密码位数需要在6~16位，否则就会提示用户.<br>这个案例涉及到onblur这个事件类型，也就是在表单失去焦点时才会触发事件处理程序，去判断用户输入的密码位数是否合规；通过value.length属性得到密码长度后，会去改变右侧背景图片和标签内容。改变元素样式主要有两种方式：element.style、element.className.当需要更改的样式比较少时，用elelment.style逐一更改即可；当需要修改的样式比较多时，给该元素添加一个类，在类中实现所有的更改(className会覆盖原来的类名，如果不想覆盖，可以将多个类名都写上，中间以空格分开)<br>具体实现如下图：<br><img src="/images/sina.png" alt="图片" title="sina"></p>
+<p>用户输入的密码位数需要在6~16位，否则就会提示用户.<br>这个案例涉及到onblur这个事件类型，也就是在表单失去焦点时才会触发事件处理程序，去判断用户输入的密码位数是否合规；通过value.length属性得到密码长度后，会去改变右侧背景图片和标签内容。改变元素样式主要有两种方式：element.style、element.className.当需要更改的样式比较少时，用elelment.style逐一更改即可；当需要修改的样式比较多时，给该元素添加一个类，在类中实现所有的更改(className会覆盖原来的类名，如果不想覆盖，可以将多个类名都写上，中间以空格分开)<br>具体实现见下图：<br><img src="/images/sina.png" alt="图片" title="sina"></p>
 
       </section>
 
